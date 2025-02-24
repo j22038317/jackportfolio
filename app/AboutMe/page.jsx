@@ -29,7 +29,7 @@ const AboutMe = () => {
           <h3 className="text-3xl font-bold pt-2">Alumni Sharing</h3>
           <p className="space-x-2 pt-2">
             Invited by Head of Program to share insights with Certificate in Information Technology juniors, including
-            (how to efficiently learn, using AI, and elective choosing).
+            (how to efficiently learn, using AI, and elective choosing) cat.
           </p>
         </div>
       </div>
