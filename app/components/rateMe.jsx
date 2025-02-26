@@ -5,6 +5,7 @@ import { assets } from "../../app/asset/asset";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+import { motion } from "framer-motion";
 
 const RateMe = () => {
   const [data, setData] = useState({
@@ -49,7 +50,7 @@ const RateMe = () => {
   return (
     <div className="w-[full] p-10 rounded-lg bg-white flex flex-col items-start">
       <div>
-        
+
       </div>
       <h1 className="text-4xl font-bold mb-5">Rate Me</h1>
 
@@ -104,12 +105,13 @@ const RateMe = () => {
           </div>
 
           <div className="flex justify-end w-full">
-            <button
+            <motion.button
               type="button"
               onClick={toggleLike}
-              className={`${
-                data.liked ? "bg-green-500" : "bg-gray-400"
-              } text-white py-3 px-5 rounded-md`}
+              className={`${data.liked ? "bg-green-500" : "bg-gray-400"
+                } text-white py-3 px-5 rounded-md`}
+              whileTap={{ scale: 0.9 }} // Shrink slightly on click
+              whileHover={{ scale: 1.1 }} // Grow slightly on hover
             >
               <Image
                 src={data.liked ? assets.like : assets.unlike}
@@ -117,16 +119,19 @@ const RateMe = () => {
                 width={24}
                 height={24}
               />
-            </button>
+            </motion.button>
           </div>
         </div>
 
-        <button
+        <motion.button
           type="submit"
           className="bg-green-500 text-white py-3 px-5 rounded-md mt-2 max-w-[150px] self-end hover:bg-green-600 disabled:bg-gray-400 disabled:cursor-not-allowed"
+          whileHover={{ scale: 1.1 }} // Slight grow on hover
+          whileTap={{ scale: 0.95 }} // Shrink slightly on click
         >
           Submit
-        </button>
+        </motion.button>
+
       </form>
 
       <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} newestOnTop closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />

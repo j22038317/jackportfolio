@@ -97,8 +97,8 @@ export const gameDev = [
 
 export const webDev = [
   { name: "Home", src: WD1 },
-  { name: "Home ", src: WD2 },
-  { name: "Home  ", src: WD3 },
+  { name: "Home", src: WD2 },
+  { name: "Home", src: WD3 },
   { name: "Sign In", src: WD4 },
   { name: "Sign In ~New Account", src: WD5 },
   { name: "Sign In ~Reset Password", src: WD6 },

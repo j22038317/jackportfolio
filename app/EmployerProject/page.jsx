@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { EP } from "../Asset/asset";
-import { gameDev } from "../Asset/asset";
+
 
 const page = () => {
   return (
@@ -31,7 +31,7 @@ const page = () => {
 
         {/* Right side - Description and EP[0], EP[1], EP[3] images */}
         <div className="pl-24 pt-5 max-w-2xl flex flex-col items-center gap-12"> {/* Added items-center to center the content */}
-          <p className="text-center space-x-2">
+          <p className="text-left space-x-2">
             Collaborated with IP Server One to design a BYOD policy and SETA program, including the creation of awareness quizzes and specific
             real-world solutions for the company.
             <br />

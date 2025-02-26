@@ -1,11 +1,17 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { assets } from "../../app/asset/asset";
 
 const AboutMe = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[20vh] gap-10 p-10 bg-gray-200">
+    <motion.div
+      initial={{ opacity: 0, x: -100 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="flex flex-col items-center justify-center min-h-[20vh] gap-10 p-10 bg-gray-200"
+    >
       <h1 className="flex justify-center w-full mt-0 text-4xl font-bold">
         About Me
       </h1>
@@ -33,7 +39,7 @@ const AboutMe = () => {
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

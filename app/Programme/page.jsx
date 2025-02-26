@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { gameDev } from "../Asset/asset";
+import { motion } from "framer-motion";
 
 const Page = () => {
   return (
@@ -52,12 +53,13 @@ const Page = () => {
         {/* Display LB1 to LB12 */}
         {gameDev[4].map((gameItem) => (
           <div key={gameItem.name}>
-            <h2 className={`text-4xl font-bold ${gameItem.description===""?"pt-5":""}`}>{gameItem.description}</h2>
+            <h2 className={`text-4xl font-bold ${gameItem.description===""?"pt-10":""}`}>{gameItem.description}</h2>
             <div className="p-1 border-4 border-gray-800 rounded-lg bg-white">
               <Image src={gameItem.src} alt={gameItem.name} width={450} height={450} />
             </div>
           </div>
         ))}
+        <motion.section>Test</motion.section>
       </div>
 
 

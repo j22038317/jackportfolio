@@ -15,7 +15,7 @@ const Header = () => {
           <Link
             href={iconData.link}
             key={iconData.name}
-            className={`flex flex-col items-center transition-all duration-300 ${
+            className={`flex flex-col items-center transition-all duration-300  ${
               selectedIcon === iconData.name ? "shadow-[0px_7px_0px_#000000]" : "" // Apply shadow to bottom-left only
             }`}
             onClick={() => setSelectedIcon(iconData.name)}
@@ -40,7 +40,7 @@ const Header = () => {
             <Link
               href={pPage.link}
               key={pPage.name}
-              className={`flex flex-col items-center transition-all duration-300 ${
+              className={`hover:motion-preset-flomoji-🚀  flex flex-col items-center transition-all duration-300 ${
                 selectedProgram === pPage.name ? "shadow-[0px_7px_0px_#000000]" : "" // Apply shadow to bottom-left only
               }`}
               onClick={() => setSelectedProgram(pPage.name)}
