@@ -48,10 +48,12 @@ const RateMe = () => {
   };
 
   return (
-    <div className="w-[full] p-10 rounded-lg bg-white flex flex-col items-start">
-      <div>
-
-      </div>
+    <motion.div className="w-[full] p-10 rounded-lg bg-white flex flex-col items-start"
+      initial={{ opacity: 0, x: "blur(10px) " }} // Start off-screen to the left
+      whileInView={{ opacity: 1, filter: "blur(0px)" }} // Animate when in view
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.3 }}
+    >
       <h1 className="text-4xl font-bold mb-5">Rate Me</h1>
 
       <div className="border-b-2 border-gray-400 w-full mb-5"></div>
@@ -108,7 +110,7 @@ const RateMe = () => {
             <motion.button
               type="button"
               onClick={toggleLike}
-              className={`${data.liked ? "bg-green-500" : "bg-gray-400"
+              className={`${data.liked ? "bg-green-500 motion-preset-confetti " : "bg-gray-400"
                 } text-white py-3 px-5 rounded-md`}
               whileTap={{ scale: 0.9 }} // Shrink slightly on click
               whileHover={{ scale: 1.1 }} // Grow slightly on hover
@@ -135,7 +137,7 @@ const RateMe = () => {
       </form>
 
       <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} newestOnTop closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,11 +1,19 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import { EP } from "../Asset/asset";
+import { motion } from "framer-motion";
+
 
 
 const page = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen gap-10 p-10 bg-gray-200"> {/* Centering the content horizontally and vertically */}
+    <motion.div className="flex flex-col items-center justify-center min-h-screen gap-10 p-10 bg-gray-200"
+      initial={{ opacity: 0, x: "blur(10px) " }} // Start off-screen to the left
+      whileInView={{ opacity: 1, filter: "blur(0px)" }} // Animate when in view
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.3 }}
+    > {/* Centering the content horizontally and vertically */}
       <h1 className="text-4xl font-bold text-center w-full">
         Employer Project
       </h1>
@@ -35,24 +43,29 @@ const page = () => {
             Collaborated with IP Server One to design a BYOD policy and SETA program, including the creation of awareness quizzes and specific
             real-world solutions for the company.
             <br />
-            <strong>~2024 DEC</strong>
+            <motion.strong animate={{ color: ["#ff0088", "#0d63f8"] }} transition={{
+              duration: 2,
+              repeat: Infinity,
+              repeatType: "reverse",
+              ease: "linear",
+            }} >~2024 DEC</motion.strong>
           </p>
 
           <div className="flex justify-center">
-            <Image src={EP[0].src} alt="profile" className="p-1 border-4 border-gray-800 rounded-lg bg-white" width={600}/>
+            <Image src={EP[0].src} alt="profile" className="p-1 border-4 border-gray-800 rounded-lg bg-white" width={600} />
           </div>
 
           <div className="flex justify-center">
-            <Image src={EP[1].src} alt="profile" className="p-1 border-4 border-gray-800 rounded-lg bg-white "width={600}/>
+            <Image src={EP[1].src} alt="profile" className="p-1 border-4 border-gray-800 rounded-lg bg-white " width={600} />
           </div>
 
           <div className="flex flex-col items-center">
             <h2 className="text-4xl font-bold text-left w-full">{EP[3].description}</h2>
-            <Image src={EP[3].src} alt={EP[3].description} className="p-1 border-4 border-gray-800 rounded-lg bg-white" width={600}/>
+            <Image src={EP[3].src} alt={EP[3].description} className="p-1 border-4 border-gray-800 rounded-lg bg-white" width={600} />
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

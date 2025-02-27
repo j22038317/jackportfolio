@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { icon, program_page } from "../asset/asset"; // Importing the icon array
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Header = () => {
   const [selectedIcon, setSelectedIcon] = useState("aboutMe");
@@ -18,7 +19,10 @@ const Header = () => {
             className={`flex flex-col items-center transition-all duration-300  ${
               selectedIcon === iconData.name ? "shadow-[0px_7px_0px_#000000]" : "" // Apply shadow to bottom-left only
             }`}
-            onClick={() => setSelectedIcon(iconData.name)}
+            onClick={() => {
+              setSelectedIcon(iconData.name);
+              setSelectedProgram("Game Development");
+            }}
           >
             <Image
               src={iconData.src}
@@ -26,9 +30,15 @@ const Header = () => {
               width={50}
               height={50}
             />
-            <p className="text-center mt-2 text-black no-underline">
+            <motion.p className="text-center mt-2 font-bold"
+            animate={selectedIcon===iconData.name?{ color: ["#ff0088", "#0d63f8"] }:{color:"black"}}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              repeatType: "reverse",
+              ease: "linear",}}>
               {iconData.name.charAt(0).toUpperCase() + iconData.name.slice(1)}
-            </p>
+            </motion.p>
           </Link>
         ))}
       </div>
@@ -40,14 +50,21 @@ const Header = () => {
             <Link
               href={pPage.link}
               key={pPage.name}
-              className={`hover:motion-preset-flomoji-🚀  flex flex-col items-center transition-all duration-300 ${
+              className={`flex flex-col items-center transition-all duration-300 ${
                 selectedProgram === pPage.name ? "shadow-[0px_7px_0px_#000000]" : "" // Apply shadow to bottom-left only
               }`}
               onClick={() => setSelectedProgram(pPage.name)}
             >
-              <p className="text-center mt-2 text-black no-underline">
+              <motion.p className="text-center mt-2 font-bold"
+               animate={selectedProgram===pPage.name?{ color: ["#ff0088", "#0d63f8"] }:{color:"black"}}
+               transition={{
+                 duration: 2,
+                 repeat: Infinity,
+                 repeatType: "reverse",
+                 ease: "linear",}}
+              >
                 {pPage.name}
-              </p>
+              </motion.p>
             </Link>
           ))}
         </div>

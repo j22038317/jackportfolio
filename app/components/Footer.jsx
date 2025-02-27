@@ -1,7 +1,9 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import Link from "next/link"; // Import the Link component
 import { iconSocial } from "../Asset/asset";
+import { motion } from "framer-motion";
 
 
 const Footer = () => {
@@ -10,7 +12,16 @@ const Footer = () => {
       <div className="flex justify-between items-center">
         <div className="flex flex-col gap-4 sm:flex-row sm:gap-8 text-white">
           {/* Left Side - Paragraphs */}
-          <p className="flex-1 text-left pl-10 motion-preset-typewriter-[40] text-lg">Here is some information about me.</p>
+          <motion.p
+            animate={{ color: ["#ff0088", "#0d63f8"] }} 
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              repeatType: "reverse",
+              ease: "linear",
+            }}
+            className="flex-1 text-left pl-10 motion-preset-typewriter-[40] text-lg">Here is some information about me.
+            </motion.p>
         </div>
 
         {/* Right Side - Social Media Icons and Resume */}

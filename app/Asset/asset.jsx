@@ -96,35 +96,35 @@ export const gameDev = [
 ]
 
 export const webDev = [
-  { name: "Home", src: WD1 },
-  { name: "Home", src: WD2 },
-  { name: "Home", src: WD3 },
-  { name: "Sign In", src: WD4 },
-  { name: "Sign In ~New Account", src: WD5 },
-  { name: "Sign In ~Reset Password", src: WD6 },
-  { name: "FAQ", src: WD7 },
-  { name: "FAQ Dropdown", src: WD8 },
-  { name: "Product ~Sport Shoes", src: WD9 },
-  { name: "Sport Shoes", src: WD10 },
-  { name: "Sport Shoes ~Set Quantity and Gender", src: WD11 },
-  { name: "Add to Cart", src: WD12 },
-  { name: "Payment", src: WD13 },
-  { name: "Payment ~Requirement not Fulfill", src: WD14 },
-  { name: "Payment ~ Confirm Notification", src: WD15 },
-  { name: "Payment ~Success", src: WD16 },
-  { name: "Order Stats", src: WD17 },
-  { name: "Order Stats ~Add Comment", src: WD18 },
-  { name: "Product ~Fabric Shoes", src: WD19 },
-  { name: "Product ~ Leather Shoes ", src: WD20 },
+  { name: WD1, description: "Home", src: WD1 },
+  { name: WD2, description: "Home", src: WD2 },
+  { name: WD3, description: "Home", src: WD3 },
+  { name: WD4, description: "Sign In", name: "Sign In", src: WD4 },
+  { name: WD5, description: "Sign In ~New Account", src: WD5 },
+  { name: WD6, description: "Sign In ~Reset Password", src: WD6 },
+  { name: WD7, description: "FAQ", src: WD7 },
+  { name: WD8, description: "FAQ Dropdown", src: WD8 },
+  { name: WD9, description: "Product ~Sport Shoes", src: WD9 },
+  { name: WD10, description: "Sport Shoes", src: WD10 },
+  { name: WD11, description: "Sport Shoes ~Set Quantity and Gender", src: WD11 },
+  { name: WD12, description: "Add to Cart", src: WD12 },
+  { name: WD13, description: "Payment", src:WD13 },
+  { name: WD14, description: "Payment ~Requirement not Fulfill", src: WD14 },
+  { name: WD15, description: "Payment ~ Confirm Notification", src: WD15 },
+  { name: WD16, description: "Payment ~Success", src: WD16 },
+  { name: WD17, description: "Order Stats", src: WD17 },
+  { name: WD18, description: "Order Stats ~Add Comment", src: WD18 },
+  { name: WD19, description: "Product ~Fabric Shoes", src: WD19 },
+  { name: WD20, description: "Product ~ Leather Shoes", src: WD20 },
 ]
 
-export const EP=[
-  {name:"EP_profile",src:EP_profile,description:""},
-  {name:"EP_profile2",src:EP_profile2,description:""},
+export const EP = [
+  { name: "EP_profile", src: EP_profile, description: "" },
+  { name: "EP_profile2", src: EP_profile2, description: "" },
   [
-    {name:"EP1",src:EP1,description:"Awareness Poster 1"},
-    {name:"EP2",src:EP2,description:"Awareness Poster 2"},
-    
+    { name: "EP1", src: EP1, description: "Awareness Poster 1" },
+    { name: "EP2", src: EP2, description: "Awareness Poster 2" },
+
   ],
-  {name:"EP3",src:EP3,description:"Task Delegation"}
+  { name: "EP3", src: EP3, description: "Task Delegation" }
 ]

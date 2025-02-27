@@ -1,7 +1,10 @@
+"use client"
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Image from "next/image";
 import { assets } from "../Asset/asset";
+import { motion } from "framer-motion";
+
 
 const ListRate = () => {
   const [ratings, setRatings] = useState([]); // Store the ratings
@@ -25,7 +28,12 @@ const ListRate = () => {
   });
 
   return (
-    <div className="w-full p-10 rounded-lg bg-white flex flex-col items-start">
+    <motion.div className="w-full p-10 rounded-lg bg-white flex flex-col items-start"
+    initial={{ opacity: 0, x: "blur(10px) " }} // Start off-screen to the left
+    whileInView={{ opacity: 1, filter: "blur(0px)" }} // Animate when in view
+    transition={{ duration: 0.8, ease: "easeOut" }}
+    viewport={{ once: true, amount: 0.3 }}
+    >
       <h1 className="text-4xl font-bold mb-5">Ratings</h1>
       <div className="border-b-2 border-gray-400 w-full mb-5"></div>
 
@@ -89,7 +97,7 @@ const ListRate = () => {
           ))}
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 
