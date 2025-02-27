@@ -20,7 +20,7 @@ const Footer = () => {
               repeatType: "reverse",
               ease: "linear",
             }}
-            className="flex-1 text-left pl-10 motion-preset-typewriter-[40] text-lg">Here is some information about me.
+            className="flex-1 text-left pl-10 motion-preset-typewriter-[40] text-lg">Here is Some Information About Me.
             </motion.p>
         </div>
 
