@@ -2,11 +2,13 @@
   "name": "portfolio_next",
   "version": "0.1.0",
   "private": true,
+ "homepage": "https://jeechian.github.io",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
-    "lint": "next lint"
+    "deploy": "gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "axios": "^1.7.9",
