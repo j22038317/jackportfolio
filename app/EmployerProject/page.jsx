@@ -8,20 +8,19 @@ import { motion } from "framer-motion";
 
 const page = () => {
   return (
-    <motion.div className="flex flex-col items-center justify-center min-h-screen gap-10 p-10 bg-gray-200"
+    <motion.div className="flex flex-col items-center justify-center min-h-screen p-10 bg-slate-950 text-white "
       initial={{ opacity: 0, x: "blur(10px) " }} // Start off-screen to the left
       whileInView={{ opacity: 1, filter: "blur(0px)" }} // Animate when in view
       transition={{ duration: 0.8, ease: "easeOut" }}
-      viewport={{ once: true, amount: 0.3 }}
-    > {/* Centering the content horizontally and vertically */}
-      <h1 className="text-4xl font-bold text-center w-full">
+    > 
+      <h1 className="text-2xl text-center w-full text-yellow-500">
         Employer Project
       </h1>
-      <h1 className="text-3xl font-bold text-center w-full">
+      <h1 className="text-4xl font-bold text-center w-full">
         BYOD Policy and SETA Program Design
       </h1>
 
-      <div className="flex flex-wrap justify-center gap-10"> {/* Centering the content within the flex container */}
+      <div className="flex flex-wrap justify-center p-10"> {/* Centering the content within the flex container */}
         {/* Left side - EP[2] images displayed top-to-bottom */}
         <div className="flex flex-col gap-5 items-center"> {/* Added items-center for centering images and text */}
           {EP[2].map((ep) => (
@@ -43,12 +42,7 @@ const page = () => {
             Collaborated with IP Server One to design a BYOD policy and SETA program, including the creation of awareness quizzes and specific
             real-world solutions for the company.
             <br />
-            <motion.strong animate={{ color: ["#ff0088", "#0d63f8"] }} transition={{
-              duration: 2,
-              repeat: Infinity,
-              repeatType: "reverse",
-              ease: "linear",
-            }} >~2024 DEC</motion.strong>
+            <strong  className="text-yellow-500">~2024 DEC</strong>
           </p>
 
           <div className="flex justify-center">
